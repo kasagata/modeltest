@@ -4,6 +4,9 @@ class OrdersController < ApplicationController
   # GET /orders or /orders.json
   def index
     @orders = Order.all
+    @title = 'Order#index'
+    @contents = Service.where(category_id: 1)
+    @processing = Service.where(category_id: 2)
   end
 
   # GET /orders/1 or /orders/1.json
